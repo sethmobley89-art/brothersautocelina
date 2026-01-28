@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brother's Automotive | Auto Repair in Celina, Ohio</title>
-  <meta name="description" content="Brother's Automotive in Celina, Ohio provides honest, family-owned auto repair and maintenance at 415 W Logan St. Call (419) 584-0707 to schedule service.">
+  <title>Brother's Automotive | Celina, Ohio Auto Repair</title>
+  <meta name="description" content="Brother's Automotive, 415 W Logan St in Celina, Ohio. Honest local auto repair and maintenance. Call (419) 584-0707 to schedule service.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="keywords" content="Brother's Automotive Celina Ohio, auto repair Celina OH, mechanic Celina, brakes, oil change, diagnostics, 415 W Logan St">
+  <meta name="keywords" content="Brother's Automotive Celina Ohio, auto repair Celina OH, mechanic Celina, 415 W Logan St">
 
   <style>
     :root {
-      --primary: #1f4b7a;
-      --secondary: #f4b41a;
-      --dark: #111827;
-      --light: #f9fafb;
-      --max-width: 1100px;
-      --radius: 8px;
+      --bg: #ffffff;
+      --bg-alt: #f5f5f5;
+      --bg-dark: #000000;
+      --bg-mid: #111111;
+      --border: #e5e5e5;
+      --text: #111111;
+      --text-muted: #666666;
+      --accent: #ffffff;
+      --accent-inverse: #000000;
+      --max-width: 1120px;
+      --radius: 6px;
+      --shadow-soft: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     * {
@@ -26,14 +32,9 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #111827;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
     }
 
     img {
@@ -41,77 +42,83 @@
       display: block;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     header {
-      background: var(--dark);
-      color: #f9fafb;
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 20;
+      background: rgba(0,0,0,0.96);
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(10px);
     }
 
     .top-bar {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0.25rem 1rem;
-      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: #d4d4d4;
     }
 
-    .top-bar span {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
+    .top-bar strong {
+      font-weight: 600;
     }
 
     .top-bar a {
-      color: #fbbf24;
+      color: #ffffff;
       font-weight: 600;
     }
 
     nav {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0.65rem 1rem;
+      padding: 0.7rem 1rem 0.8rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
     .logo {
-      font-weight: 800;
-      font-size: 1.2rem;
-      letter-spacing: 0.04em;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
     }
 
-    .logo span.icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #fbbf24, #f97316);
+    .logo-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
-      color: #111827;
-      font-weight: 900;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
-      font-size: 0.95rem;
+      gap: 1.4rem;
+      font-size: 0.9rem;
+      align-items: center;
       flex-wrap: wrap;
     }
 
     .nav-links a {
-      color: #e5e7eb;
-      opacity: 0.9;
+      color: #e5e5e5;
+      opacity: 0.85;
     }
 
     .nav-links a:hover {
@@ -122,838 +129,165 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.35rem;
-      padding: 0.65rem 1rem;
+      gap: 0.3rem;
+      padding: 0.55rem 1rem;
       border-radius: 999px;
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
+      border: 1px solid currentColor;
       cursor: pointer;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-      text-decoration: none;
+      background: transparent;
+      transition: background 0.12s ease, color 0.12s ease, transform 0.08s ease, box-shadow 0.08s ease;
       white-space: nowrap;
     }
 
-    .btn-primary {
-      background: var(--secondary);
-      color: #111827;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
-    }
-
-    .btn-primary:hover {
-      background: #fbbf24;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
-    }
-
-    .btn-outline {
-      border: 1px solid #e5e7eb;
+    .btn-light {
       background: #ffffff;
-      color: #111827;
+      color: #000000;
+      border-color: #ffffff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
     }
 
-    .btn-outline:hover {
-      background: #f3f4f6;
+    .btn-light:hover {
+      background: #f5f5f5;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+    }
+
+    .btn-outline-light {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    .btn-outline-light:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .btn-dark {
+      background: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+
+    .btn-dark:hover {
+      background: #111111;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.35);
     }
 
     main {
       min-height: 100vh;
     }
 
+    /* HERO */
+
     .hero {
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 70%);
-      color: #f9fafb;
-      padding: 3rem 1rem 3.5rem;
+      background: #000000;
+      color: #ffffff;
+      padding: 3.2rem 1rem 3.4rem;
+      border-bottom: 1px solid #111111;
     }
 
     .hero-inner {
       max-width: var(--max-width);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2.5rem;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 2.4rem;
       align-items: center;
     }
 
-    .eyebrow {
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
+    .hero-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #93c5fd;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
+      color: #a3a3a3;
+      margin-bottom: 0.7rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.1rem, 3.2vw + 1rem, 3.1rem);
-      line-height: 1.1;
+      font-size: clamp(2.1rem, 3vw + 1.1rem, 3rem);
       letter-spacing: -0.03em;
+      line-height: 1.1;
       margin-bottom: 1rem;
     }
 
-    .hero h1 span.highlight {
-      color: #fbbf24;
+    .hero h1 span {
+      color: #ffffff;
     }
 
     .hero p {
-      font-size: 1rem;
+      font-size: 0.98rem;
+      color: #d4d4d4;
       max-width: 32rem;
-      color: #e5e7eb;
       margin-bottom: 1.5rem;
     }
 
     .hero-cta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
-      align-items: center;
-      margin-bottom: 1.5rem;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-
-    .hero-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      gap: 1.2rem;
+      font-size: 0.8rem;
+      color: #a3a3a3;
     }
 
     .hero-card {
-      background: radial-gradient(circle at top, rgba(59,130,246,0.32), #020617 52%);
-      border-radius: 16px;
-      border: 1px solid rgba(148,163,184,0.35);
-      padding: 1.5rem;
-      box-shadow: 0 16px 40px rgba(15,23,42,0.9);
+      background: #050505;
+      border-radius: 10px;
+      border: 1px solid #1f1f1f;
+      padding: 1.4rem 1.3rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #3f3f3f;
+      font-size: 0.78rem;
+      color: #d4d4d4;
+      margin-bottom: 0.7rem;
     }
 
     .hero-card h2 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero-card p {
-      font-size: 0.9rem;
-      color: #e5e7eb;
-      margin-bottom: 0.75rem;
+      font-size: 0.86rem;
+      color: #b3b3b3;
+      margin-bottom: 0.7rem;
     }
 
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.7);
-      border: 1px solid rgba(148,163,184,0.7);
-      color: #e5e7eb;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-badges {
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-      font-size: 0.8rem;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
     }
 
-    .hero-badges span {
-      padding: 0.25rem 0.65rem;
+    .hero-tags span {
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.6);
-      background: rgba(15,23,42,0.7);
-      color: #e5e7eb;
+      border: 1px solid #2b2b2b;
+      padding: 0.2rem 0.6rem;
+      color: #e5e5e5;
     }
+
+    /* SECTIONS */
 
     section {
       padding: 3rem 1rem;
     }
 
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .section-header h2 {
-      font-size: 1.6rem;
-      letter-spacing: -0.02em;
-    }
-
-    .section-header p {
-      color: #4b5563;
-      font-size: 0.95rem;
-      max-width: 32rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      border-radius: 14px;
-      border: 1px solid #e5e7eb;
-      padding: 1.2rem;
-      background: #ffffff;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.03);
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: #4b5563;
-      margin-bottom: 0.5rem;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .chip {
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: #f3f4f6;
-      color: #374151;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 1.8rem;
-      align-items: start;
-    }
-
-    .list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .list li {
-      display: flex;
-      gap: 0.45rem;
-      align-items: flex-start;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: #374151;
-    }
-
-    .list li span.bullet {
-      margin-top: 0.15rem;
-      font-size: 0.9rem;
-    }
-
-    .stat-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .stat {
-      flex: 1 1 110px;
-      border-radius: 12px;
-      background: #f9fafb;
-      padding: 0.8rem 0.9rem;
-      border: 1px solid #e5e7eb;
-    }
-
-    .stat .value {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .stat .label {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.3rem;
-    }
-
-    .testimonial {
-      border-radius: 14px;
-      background: #111827;
-      color: #e5e7eb;
-      padding: 1.1rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .testimonial::before {
-      content: "“";
-      position: absolute;
-      font-size: 3.5rem;
-      color: rgba(55,65,81,0.5);
-      top: -0.9rem;
-      left: 0.4rem;
-    }
-
-    .testimonial p {
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .testimonial strong {
-      font-size: 0.85rem;
-      color: #fbbf24;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .gallery-grid img {
-      border-radius: 12px;
-      object-fit: cover;
-      height: 170px;
-      background: #e5e7eb;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 1.1fr;
-      gap: 1.8rem;
-      align-items: start;
-    }
-
-    .contact-details {
-      font-size: 0.93rem;
-      color: #374151;
-    }
-
-    .contact-details h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contact-details p {
-      margin-bottom: 0.4rem;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin: 0.8rem 0;
-    }
-
-    .contact-row span {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-    }
-
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-    }
-
-    .hours-table td {
-      padding: 0.2rem 0;
-    }
-
-    .hours-table td:first-child {
-      color: #6b7280;
-      width: 40%;
-    }
-
-    form {
-      display: grid;
-      gap: 0.7rem;
-    }
-
-    label {
-      font-size: 0.85rem;
-      color: #4b5563;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.6rem 0.7rem;
-      border-radius: 8px;
-      border: 1px solid #d1d5db;
-      font: inherit;
-    }
-
-    input:focus, textarea:focus {
-      outline: 2px solid var(--secondary);
-      outline-offset: 1px;
-      border-color: var(--secondary);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    footer {
-      background: #020617;
-      color: #9ca3af;
-      padding: 1.7rem 1rem;
-      font-size: 0.85rem;
-    }
-
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .footer-inner a {
-      color: #e5e7eb;
-    }
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-      .hero-card {
-        max-width: 360px;
-      }
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .two-column, .testimonials-grid, .contact-grid, .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.6rem;
-      }
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .hero {
-        padding-top: 2.2rem;
-      }
-      section {
-        padding: 2.4rem 1rem;
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-      .top-bar {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="top-bar">
-    <span>Family-owned auto repair in Celina, Ohio</span>
-    <span>
-      Service appointments:
-      <a href="tel:+1-419-584-0707">(419) 584‑0707</a>
-    </span>
-  </div>
-  <nav>
-    <div class="logo">
-      <span class="icon">BA</span>
-      <span>Brother's Automotive</span>
-    </div>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Photos</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn btn-primary">Book Service</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="eyebrow">415 W Logan St · Celina, OH</div>
-        <h1>
-          Brother's Automotive:
-          <span class="highlight">honest auto repair</span>
-          in Celina, Ohio.
-        </h1>
-        <p>
-          Brother's Automotive is a locally owned auto repair shop on the west side of Celina, providing straightforward advice, fair pricing, and quality work to keep your car or truck on the road.
-        </p>
-        <div class="hero-cta">
-          <a href="tel:+1-419-584-0707" class="btn btn-primary">
-            Call (419) 584‑0707
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            Request an appointment
-          </a>
-        </div>
-        <div class="hero-meta">
-          <span>✔ Family-owned local shop</span>
-          <span>✔ Honest pricing & clear communication</span>
-          <span>✔ Convenient west‑side Celina location</span>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <div class="hero-pill">
-          Located at 415 W Logan St, Celina
-        </div>
-        <h2>From oil changes to major repairs</h2>
-        <p>
-          Whether you need basic maintenance, brake work, diagnostics, or larger repairs, Brother's Automotive provides dependable service backed by experience and attention to detail.
-        </p>
-        <div class="hero-badges">
-          <span>Check engine light</span>
-          <span>Brakes & suspension</span>
-          <span>Oil & maintenance</span>
-          <span>Heating & A/C</span>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2>Auto repair services</h2>
-        <p>
-          Brother's Automotive provides full‑service repair and maintenance for most cars and light trucks in and around Celina.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="card">
-          <h3>Diagnostics & drivability</h3>
-          <p>
-            Modern diagnostic tools to track down warning lights, rough running, and performance problems so repairs are done right the first time.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Check engine light</span>
-            <span class="chip">Engine diagnostics</span>
-            <span class="chip">Electrical issues</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Brakes & suspension</h3>
-          <p>
-            Safe stopping and a smooth ride with quality brake and suspension repairs on domestic and many import vehicles.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Pads & rotors</span>
-            <span class="chip">Brake lines</span>
-            <span class="chip">Shocks & struts</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Oil changes & maintenance</h3>
-          <p>
-            Regular oil changes, filters, and inspections to help your vehicle last longer and prevent expensive breakdowns.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Oil & filter</span>
-            <span class="chip">Fluid checks</span>
-            <span class="chip">Multi‑point inspections</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Engines, cooling & more</h3>
-          <p>
-            From leaks and overheating to more involved engine repairs, we diagnose and repair issues to keep you moving.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Water pumps</span>
-            <span class="chip">Radiators</span>
-            <span class="chip">Belts & hoses</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Heating & A/C repair</h3>
-          <p>
-            Heat in the winter and cool air in the summer with repair and recharging of heating and air conditioning systems.
-          </p>
-          <div class="chip-row">
-            <span class="chip">A/C recharge</span>
-            <span class="chip">Blower motors</span>
-            <span class="chip">Climate control</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Steering, tires & more</h3>
-          <p>
-            Steering and tire‑related repairs to help your vehicle track straight and wear tires evenly.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Tie rods</span>
-            <span class="chip">Ball joints</span>
-            <span class="chip">Tire rotations</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" style="background:#f9fafb;">
-    <div class="section-inner">
-      <div class="two-column">
-        <div>
-          <div class="section-header">
-            <h2>About Brother's Automotive</h2>
-            <p>
-              Brother's Automotive is a locally owned shop on Logan Street in Celina, started by brothers who wanted to offer honest, straightforward auto repair close to home.
-            </p>
-          </div>
-          <ul class="list">
-            <li>
-              <span class="bullet">✔</span>
-              <span>Local, family‑owned business serving Celina and surrounding communities.</span>
-            </li>
-            <li>
-              <span class="bullet">✔</span>
-              <span>Clear communication before work begins so you understand your options.</span>
-            </li>
-            <li>
-              <span class="bullet">✔</span>
-              <span>Focused on honest pricing and reliable work you can feel confident in.</span>
-            </li>
-            <li>
-              <span class="bullet">✔</span>
-              <span>Convenient location at 415 W Logan St with easy access and parking.</span>
-            </li>
-          </ul>
-
-          <div class="stat-row">
-            <div class="stat">
-              <div class="value">Celina, OH</div>
-              <div class="label">Proud to serve local drivers</div>
-            </div>
-            <div class="stat">
-              <div class="value">415</div>
-              <div class="label">W Logan St location</div>
-            </div>
-            <div class="stat">
-              <div class="value">One shop</div>
-              <div class="label">Focused on quality over volume</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>What to expect at your visit</h3>
-          <p>
-            When you pull into Brother's Automotive, you will be greeted by a friendly team that treats your vehicle like their own. They will listen to your concerns, look over your vehicle, and explain what they find.
-          </p>
-          <p>
-            You will receive straightforward recommendations and an estimate before repairs begin, so there are no surprises at pickup.
-          </p>
-          <a href="tel:+1-419-584-0707" class="btn btn-primary" style="margin-top:0.8rem;">
-            Call to schedule service
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHOTOS / GALLERY -->
-  <section id="gallery">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2>Photos of Brother's Automotive</h2>
-        <p>
-          A look at the shop and the kind of vehicles that come through our doors at 415 W Logan St in Celina.
-        </p>
-      </div>
-
-      <div class="gallery-grid">
-        <!-- Replace these placeholder image URLs with your own uploaded photos if desired -->
-        <img src="https://via.placeholder.com/500x300?text=Shop+Exterior" alt="Exterior of Brother's Automotive in Celina, Ohio">
-        <img src="https://via.placeholder.com/500x300?text=Service+Bays" alt="Service bays inside Brother's Automotive">
-        <img src="https://via.placeholder.com/500x300?text=Customer+Parking" alt="Parking area at Brother's Automotive">
-      </div>
-      <p style="font-size:0.85rem;color:#6b7280;margin-top:0.8rem;">
-        Actual photos can be added here from your own camera or social media by updating the image links in this section.
-      </p>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2>What customers say</h2>
-        <p>
-          Brother's Automotive has built a reputation in Celina for honest pricing, friendly service, and taking care of customers the right way.
-        </p>
-      </div>
-
-      <div class="testimonials-grid">
-        <article class="testimonial">
-          <p>
-            They explained what my car needed, gave me options, and the bill was exactly what they told me ahead of time. Great local shop.
-          </p>
-          <strong>— Celina driver</strong>
-        </article>
-        <article class="testimonial">
-          <p>
-            Honest pricing and they got my vehicle back to me on time. I appreciate having a place I can trust in town.
-          </p>
-          <strong>— Repeat customer</strong>
-        </article>
-        <article class="testimonial">
-          <p>
-            Friendly people, good communication, and quality work. I recommend Brother's Automotive to family and friends.
-          </p>
-          <strong>— Local resident</strong>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" style="background:#f9fafb;">
-    <div class="section-inner">
-      <div class="section-header">
-        <h2>Contact & hours</h2>
-        <p>
-          Call, stop by, or send a message to schedule your next service at Brother's Automotive in Celina, Ohio.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-details card">
-          <h3>Shop information</h3>
-          <div class="contact-row">
-            <span><strong>Phone:</strong> <a href="tel:+1-419-584-0707">(419) 584‑0707</a></span>
-            <span><strong>Address:</strong> 415 W Logan St, Celina, OH 45822</span>
-          </div>
-          <p><strong>Business hours</strong></p>
-          <table class="hours-table">
-            <tr><td>Monday</td><td>8:00 AM – 5:00 PM</td></tr>
-            <tr><td>Tuesday</td><td>8:00 AM – 5:00 PM</td></tr>
-            <tr><td>Wednesday</td><td>8:00 AM – 5:00 PM</td></tr>
-            <tr><td>Thursday</td><td>8:00 AM – 5:00 PM</td></tr>
-            <tr><td>Friday</td><td>8:00 AM – 5:00 PM</td></tr>
-            <tr><td>Saturday</td><td>By appointment</td></tr>
-            <tr><td>Sunday</td><td>Closed</td></tr>
-          </table>
-
-          <p style="margin-top:0.9rem;">
-            Please call ahead to schedule service so the shop can plan time for your vehicle.
-          </p>
-        </div>
-
-        <div>
-          <div class="card" style="margin-bottom:1rem;">
-            <h3>Request an appointment</h3>
-            <p style="font-size:0.9rem;margin-bottom:0.7rem;">
-              Use this form to tell Brother's Automotive about your vehicle and the work you need. A team member can follow up by phone.
-            </p>
-            <!-- This form uses mailto; if you have a shop email, replace the address below -->
-            <form action="mailto:info@example.com" method="post" enctype="text/plain">
-              <div>
-                <label for="name">Name</label>
-                <input id="name" name="Name" required>
-              </div>
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="Phone" required>
-              </div>
-              <div>
-                <label for="vehicle">Vehicle (year, make, model)</label>
-                <input id="vehicle" name="Vehicle">
-              </div>
-              <div>
-                <label for="message">Describe the issue or service needed</label>
-                <textarea id="message" name="Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="margin-top:0.3rem;">
-                Send request
-              </button>
-            </form>
-          </div>
-
-          <div class="card">
-            <h3>Find Brother's Automotive</h3>
-            <p style="font-size:0.85rem;margin-bottom:0.5rem;">
-              The shop is located on W Logan St in Celina, just west of downtown, making it convenient for drivers throughout Mercer County.
-            </p>
-            <div style="border-radius:10px;overflow:hidden;">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.587!2d-84.580!3d40.552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s415%20W%20Logan%20St%2C%20Celina%2C%20OH%2045822!5e0!3m2!1sen!2sus!4v0000000000000"
-                width="100%"
-                height="220"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <span>© <span id="year"></span> Brother's Automotive · Celina, Ohio</span>
-    <span>Website for Brother's Automotive, 415 W Logan St, Celina, OH 45822.</span>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+    .section-i
